@@ -1,13 +1,17 @@
 using UnityEngine;
 
-// This script marks an object as "photographable"
-// and stores the word info that will be shown after taking a photo.
+// This script stores the vocabulary data for one photographable object.
 public class PhotoObject : MonoBehaviour
 {
-    [Header("Word Info")]
+    [Header("Main Words")]
     public string wordEnglish = "Cat";
     public string wordTurkish = "Kedi";
 
+    [Header("Text shown immediately after taking photo")]
+    [TextArea]
+    public string photoDisplayText = "Cat";
+
+    [Header("Example Sentences")]
     [TextArea] public string exampleEnglish = "Cat loves sleeping.";
     [TextArea] public string exampleTurkish = "Kedi uyumayı sever.";
 }
